@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>업무 지원 데스크 사용설명서</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Rounded" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2e7d32;
+            --primary-light: #e8f5e9;
+            --bg: #f8faf8;
+            --text: #222;
+            --muted: #666;
+            --border: #e0e0e0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Pretendard', sans-serif; }
+        body { background: var(--bg); color: var(--text); line-height: 1.7; }
+
+        /* Header */
+        .header {
+            background: white;
+            border-bottom: 1px solid var(--border);
+            padding: 14px 20px;
+            position: sticky; top: 0; z-index: 10;
+            display: flex; align-items: center; gap: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .header button {
+            background: none; border: none; cursor: pointer;
+            color: var(--primary); font-size: 24px; padding: 4px;
+            display: flex; align-items: center;
+        }
+        .header h1 { font-size: 18px; font-weight: 700; color: var(--primary); }
+
+        /* Content */
+        .content { max-width: 700px; margin: 0 auto; padding: 24px 20px 80px; }
+        
+        .intro {
+            background: linear-gradient(135deg, var(--primary) 0%, #1b5e20 100%);
+            color: white; border-radius: 16px; padding: 28px 24px;
+            margin-bottom: 32px;
+        }
+        .intro h2 { font-size: 22px; margin-bottom: 8px; }
+        .intro p { font-size: 14px; opacity: 0.85; line-height: 1.6; }
+
+        /* Section */
+        .section { margin-bottom: 32px; }
+        .section-title {
+            font-size: 18px; font-weight: 700; color: var(--primary);
+            margin-bottom: 16px; padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary-light);
+            display: flex; align-items: center; gap: 8px;
+        }
+        .section-title .material-icons-rounded { font-size: 22px; }
+
+        /* Card */
+        .card {
+            background: white; border-radius: 14px; padding: 20px;
+            margin-bottom: 14px; border: 1px solid var(--border);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+        .card h4 {
+            font-size: 16px; font-weight: 700; margin-bottom: 8px;
+            display: flex; align-items: center; gap: 6px;
+        }
+        .card p, .card li { font-size: 14px; color: var(--muted); line-height: 1.7; }
+        .card ul { padding-left: 20px; margin-top: 6px; }
+        .card li { margin-bottom: 4px; }
+
+        .badge {
+            display: inline-block; padding: 2px 10px; border-radius: 20px;
+            font-size: 12px; font-weight: 600;
+        }
+        .badge-blue { background: #e3f2fd; color: #1565c0; }
+        .badge-green { background: #e8f5e9; color: #2e7d32; }
+        .badge-orange { background: #fff3e0; color: #e65100; }
+        .badge-purple { background: #f3e5f5; color: #7b1fa2; }
+
+        /* Steps */
+        .step {
+            display: flex; gap: 14px; margin-bottom: 16px;
+            align-items: flex-start;
+        }
+        .step-num {
+            width: 28px; height: 28px; min-width: 28px;
+            background: var(--primary); color: white;
+            border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; font-size: 14px; font-weight: 700;
+            margin-top: 2px;
+        }
+        .step-text h5 { font-size: 15px; font-weight: 600; margin-bottom: 3px; }
+        .step-text p { font-size: 13px; color: var(--muted); }
+
+        /* Tip box */
+        .tip {
+            background: #fffde7; border-left: 4px solid #fbc02d;
+            border-radius: 0 10px 10px 0; padding: 14px 16px;
+            margin-top: 12px;
+        }
+        .tip p { font-size: 13px; color: #6d6020; }
+        .tip strong { color: #f9a825; }
+
+        /* Footer */
+        .footer {
+            text-align: center; padding: 20px;
+            color: #aaa; font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <button onclick="history.back()" aria-label="이전으로">
+            <span class="material-icons-rounded">arrow_back</span>
+        </button>
+        <h1>사용설명서</h1>
+    </div>
+
+    <div class="content">
+
+        <!-- 소개 -->
+        <div class="intro">
+            <h2>📋 업무 지원 데스크</h2>
+            <p>야생생물관리협회 직원들을 위한 통합 업무 지원 플랫폼입니다. 뉴스 검색, 전자 인수증 발급, 시스템 소개자료 열람, 연락처 관리 등 다양한 업무를 핸드폰 하나로 간편하게 처리할 수 있습니다.</p>
+        </div>
+
+        <!-- 로그인 방법 -->
+        <div class="section">
+            <div class="section-title">
+                <span class="material-icons-rounded">login</span>
+                로그인 방법
+            </div>
+            <div class="card">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-text">
+                        <h5>이름 입력</h5>
+                        <p>본인의 이름을 정확히 입력합니다. (예: 홍길동)</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-text">
+                        <h5>비밀번호 입력</h5>
+                        <p>본인의 휴대폰 번호 <strong>뒤 4자리</strong>를 입력합니다.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-text">
+                        <h5>로그인 버튼 터치</h5>
+                        <p>정보가 맞으면 대시보드 화면으로 이동합니다.</p>
+                    </div>
+                </div>
+                <div class="tip">
+                    <p><strong>💡 TIP</strong> 로그인 정보가 기억나지 않으면 본부 담당자에게 문의해 주세요.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 각 메뉴 설명 -->
+        <div class="section">
+            <div class="section-title">
+                <span class="material-icons-rounded">apps</span>
+                메뉴별 사용법
+            </div>
+
+            <!-- 뉴스 레이더 -->
+            <div class="card">
+                <h4><span class="badge badge-blue">뉴스 레이더</span></h4>
+                <p>수렵, ASF, AI, 교란생물, 협회 관련 최신 뉴스를 한눈에 모아볼 수 있습니다.</p>
+                <ul>
+                    <li>상단 탭을 눌러 카테고리별 뉴스를 전환합니다.</li>
+                    <li>ASF/AI 탭에서는 <strong>발생현황 지도</strong>도 확인할 수 있습니다.</li>
+                    <li>하단에서 <strong>관련 법령 검색</strong>과 <strong>주간 AI 뉴스 브리핑</strong>도 이용 가능합니다.</li>
+                </ul>
+            </div>
+
+            <!-- 전자 인수증 -->
+            <div class="card">
+                <h4><span class="badge badge-green">전자 인수증</span></h4>
+                <p>야생동물 질병진단용 채혈키트의 모바일 전자 인수증을 발급합니다.</p>
+                <ul>
+                    <li>날짜, 인수자/인계자 정보, 키트 종류 및 규격, 수량을 입력합니다.</li>
+                    <li><strong>전자서명</strong> 버튼을 눌러 화면에 직접 서명합니다.</li>
+                    <li>완성된 인수증을 <strong>이미지로 저장</strong>하거나 <strong>카카오톡</strong>으로 바로 공유할 수 있습니다.</li>
+                </ul>
+            </div>
+
+            <!-- 시스템 소개 -->
+            <div class="card">
+                <h4><span class="badge badge-orange">시스템 소개</span></h4>
+                <p>스마트 야생생물 관제시스템의 일러스트 설명서입니다.</p>
+                <ul>
+                    <li>좌우로 넘기거나 스크롤하여 각 슬라이드를 열람합니다.</li>
+                    <li>공무원 및 지자체 담당자에게 시스템을 소개할 때 활용할 수 있습니다.</li>
+                </ul>
+            </div>
+
+            <!-- 스마트 연락처 관리 -->
+            <div class="card">
+                <h4><span class="badge badge-purple">스마트 연락처 관리</span></h4>
+                <p>명함을 AI가 자동으로 읽어 연락처를 저장하고, 엑셀로 관리합니다.</p>
+                <ul>
+                    <li><strong>명함 스캔</strong>: 카메라로 명함을 찍으면 AI(Google Cloud Vision)가 소속, 성명, 전화번호, 주소 등을 자동 인식하여 입력합니다.</li>
+                    <li><strong>수동 입력</strong>: 명함 없이도 직접 연락처를 입력할 수 있습니다.</li>
+                    <li><strong>전화 걸기</strong>: 연락처의 전화번호를 터치하면 바로 전화가 연결됩니다.</li>
+                    <li><strong>핸드폰 연락처 저장</strong>: 👤+ 버튼을 누르면 해당 연락처가 핸드폰 기본 연락처 앱으로 저장됩니다.</li>
+                    <li><strong>엑셀 다운로드</strong>: 상단 다운로드 아이콘을 누르면 전체 연락처를 엑셀 파일로 내보낼 수 있습니다.</li>
+                </ul>
+                <div class="tip">
+                    <p><strong>💡 TIP</strong> 명함 스캔 시 밝은 곳에서 명함이 기울어지지 않게 찍으면 인식률이 더 높아집니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 공통 안내 -->
+        <div class="section">
+            <div class="section-title">
+                <span class="material-icons-rounded">info</span>
+                알아두면 좋은 것
+            </div>
+            <div class="card">
+                <h4>📱 모바일 최적화</h4>
+                <p>모든 메뉴는 핸드폰에서 사용하기 편리하게 설계되어 있습니다. PC에서도 동일하게 이용 가능합니다.</p>
+            </div>
+            <div class="card">
+                <h4>🔒 데이터 보안</h4>
+                <p>연락처 데이터는 사용 중인 브라우저에만 저장되며 외부 서버로 전송되지 않습니다. 브라우저 데이터를 삭제하면 저장된 연락처도 함께 삭제되므로, 주기적으로 엑셀로 백업해 두시길 권장합니다.</p>
+            </div>
+            <div class="card">
+                <h4>← 이전 화면으로 돌아가기</h4>
+                <p>모든 화면 좌측 상단에 있는 <strong>← 화살표 버튼</strong>을 누르면 이전 화면(대시보드)으로 돌아갑니다.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 야생생물관리협회 업무 지원 데스크</p>
+        </div>
+    </div>
+
+</body>
+</html>

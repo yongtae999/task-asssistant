@@ -138,21 +138,18 @@ document.addEventListener('DOMContentLoaded', () => {
             appGrid.appendChild(card);
         });
 
-        // '새로운 프로젝트 추가' (관리자용 가이드 버튼)
-        const addCard = document.createElement('div');
-        addCard.className = 'app-card theme-add';
-        addCard.style.cursor = 'pointer';
-        addCard.innerHTML = `
+        // '사용설명서' 카드 추가
+        const manualCard = document.createElement('a');
+        manualCard.href = 'manual.html';
+        manualCard.className = 'app-card theme-green';
+        manualCard.innerHTML = `
             <div class="app-icon-wrapper">
-                <span class="material-icons-rounded">add</span>
+                <span class="material-icons-rounded">help_outline</span>
             </div>
-            <h4>새 프로젝트 추가</h4>
-            <p>script.js 파일의 appsData 배열에 항목을 추가하면 여기에 새로운 시스템이 연결됩니다.</p>
+            <h4>사용설명서</h4>
+            <p>업무 지원 데스크의 로그인 방법 및 각 메뉴별 사용법을 안내합니다.</p>
+            <span class="material-icons-rounded launch-icon">arrow_forward</span>
         `;
-        addCard.addEventListener('click', () => {
-            alert('새 프로젝트를 추가하려면 \\ntask-assistant/script.js 파일에서 \\nappsData 배열에 새 프로젝트 정보를 입력하세요.');
-        });
-        
-        appGrid.appendChild(addCard);
+        appGrid.appendChild(manualCard);
     }
 });
