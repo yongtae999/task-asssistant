@@ -7,7 +7,7 @@ const appsData = [
         description: '업무관련 종사자의 분야별 뉴스 검색 및 법령 검색을 지원합니다.',
         icon: 'map', // Material Icons 이름
         theme: 'theme-blue',
-        url: 'https://yongtae999.github.io/news-rader/ai_status.html'
+        url: 'https://yongtae999.github.io/news-rader/index.html'
     },
     {
         id: 'kit-receipt',
