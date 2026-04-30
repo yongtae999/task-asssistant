@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>야생생물관리협회 업무 지원 데스크</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Rounded" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation"></div>
+
+    <!-- Login Screen -->
+    <main id="login-screen" class="screen active">
+        <div class="glass-card login-card">
+            <div class="logo-area">
+                <h1>업무 지원 데스크</h1>
+                <p>야생생물관리협회 통합 시스템</p>
+            </div>
+            
+            <form id="login-form">
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="이름 (예: 홍길동)" required autocomplete="off">
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="휴대폰 번호 뒤 4자리" required maxlength="4" pattern="\d{4}" title="숫자 4자리를 입력해주세요">
+                </div>
+                <button type="submit" class="btn-primary">
+                    로그인
+                </button>
+            </form>
+            <p class="error-message" id="login-error">이름과 휴대폰 번호 4자리를 정확히 입력해주세요.</p>
+        </div>
+    </main>
+
+    <!-- Dashboard Screen -->
+    <main id="dashboard-screen" class="screen">
+        <header class="glass-header">
+            <div class="header-left">
+                <span class="material-icons-rounded header-logo">eco</span>
+                <h2>야생생물관리협회</h2>
+            </div>
+            <div class="header-right">
+                <span class="user-info">관리자님 환영합니다</span>
+                <button id="logout-btn" class="btn-icon" title="로그아웃">
+                    <span class="material-icons-rounded">logout</span>
+                </button>
+            </div>
+        </header>
+
+        <div class="dashboard-content">
+            <div class="greeting">
+                <h3>어떤 업무를 진행하시겠습니까?</h3>
+                <p>원하시는 시스템을 선택해주세요.</p>
+            </div>
+
+            <!-- 앱 목록이 렌더링될 컨테이너 -->
+            <div class="app-grid" id="app-grid">
+                <!-- JavaScript로 동적 생성됨 -->
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
