@@ -7,7 +7,7 @@ const appsData = [
         description: '업무관련 종사자의 분야별 뉴스 검색 및 법령 검색을 지원합니다.',
         icon: 'map', // Material Icons 이름
         theme: 'theme-blue',
-        url: '../news-radar/ai_status.html'
+        url: 'https://yongtae999.github.io/news-rader/ai_status.html'
     },
     {
         id: 'kit-receipt',
@@ -15,7 +15,7 @@ const appsData = [
         description: '야생동물 질병진단용 채혈키트 모바일 전자 인수증 발급 및 전자서명 시스템입니다.',
         icon: 'receipt_long',
         theme: 'theme-green',
-        url: '../wildlife-management-system/kit-receipt/index.html'
+        url: 'https://yongtae999.github.io/wildlife-management-system/kit-receipt/index.html'
     },
     {
         id: 'system-manual',
@@ -23,7 +23,7 @@ const appsData = [
         description: '야생생물관리시스템 공무원 및 관리자용 사용 설명서 및 소개 자료입니다.',
         icon: 'menu_book',
         theme: 'theme-orange',
-        url: '../wildlife-management-system/야생생물시스템_소개자료_공무원용.html'
+        url: 'https://yongtae999.github.io/wildlife-management-system/wildlife_system_manual.html'
     }
 ];
 
