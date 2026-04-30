@@ -19,7 +19,7 @@ const appsData = [
     },
     {
         id: 'system-manual',
-        title: '업무 매뉴얼',
+        title: '시스템 소개',
         description: '야생생물관리시스템 공무원 및 관리자용 사용 설명서 및 소개 자료입니다.',
         icon: 'menu_book',
         theme: 'theme-orange',
