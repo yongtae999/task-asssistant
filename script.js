@@ -24,6 +24,14 @@ const appsData = [
         icon: 'menu_book',
         theme: 'theme-orange',
         url: 'https://yongtae999.github.io/wildlife-management-system/wildlife_system_manual.html'
+    },
+    {
+        id: 'contact-manager',
+        title: '스마트 연락처 관리',
+        description: '카메라로 명함을 찍으면 AI가 글씨를 읽어 자동으로 저장하고 엑셀로 관리합니다.',
+        icon: 'contacts',
+        theme: 'theme-purple',
+        url: 'https://yongtae999.github.io/contact-manager/index.html'
     }
 ];
 
