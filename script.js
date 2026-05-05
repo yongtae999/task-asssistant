@@ -2,28 +2,20 @@
 // 새로운 프로젝트가 생기면 이곳 배열에 객체를 추가하기만 하면 대시보드에 자동으로 나타납니다.
 const appsData = [
     {
+        id: 'manual',
+        title: '사용설명서',
+        description: '업무 지원 데스크의 로그인 방법 및 각 메뉴별 사용법을 안내합니다.',
+        icon: 'help_outline',
+        theme: 'theme-green',
+        url: 'manual.html'
+    },
+    {
         id: 'news-radar',
         title: '뉴스 레이더',
         description: '업무관련 종사자의 분야별 뉴스 검색 및 법령 검색을 지원합니다.',
         icon: 'map', // Material Icons 이름
         theme: 'theme-blue',
         url: 'https://yongtae999.github.io/news-rader/index.html'
-    },
-    {
-        id: 'kit-receipt',
-        title: '전자 인수증',
-        description: '야생동물 질병진단용 채혈키트 모바일 전자 인수증 발급 및 전자서명 시스템입니다.',
-        icon: 'receipt_long',
-        theme: 'theme-green',
-        url: 'https://yongtae999.github.io/wildlife-management-system/kit-receipt/index.html'
-    },
-    {
-        id: 'system-manual',
-        title: '시스템 소개',
-        description: '야생생물관리시스템 공무원 및 관리자용 사용 설명서 및 소개 자료입니다.',
-        icon: 'menu_book',
-        theme: 'theme-orange',
-        url: 'https://yongtae999.github.io/wildlife-management-system/wildlife_system_manual.html'
     },
     {
         id: 'contact-manager',
@@ -34,12 +26,28 @@ const appsData = [
         url: 'https://yongtae999.github.io/contact-manager/index.html'
     },
     {
+        id: 'kit-receipt',
+        title: '전자 인수증',
+        description: '야생동물 질병진단용 채혈키트 모바일 전자 인수증 발급 및 전자서명 시스템입니다.',
+        icon: 'receipt_long',
+        theme: 'theme-green',
+        url: 'https://yongtae999.github.io/wildlife-management-system/kit-receipt/index.html'
+    },
+    {
         id: 'label-printer',
         title: '스마트 주소 라벨 생성기',
         description: '엑셀 주소록을 업로드하여 발송용 폼텍 라벨지로 바로 인쇄하고 우편번호를 자동 생성합니다.',
         icon: 'label',
         theme: 'theme-blue',
         url: 'https://yongtae999.github.io/label-printer/index.html'
+    },
+    {
+        id: 'system-manual',
+        title: '시스템 소개',
+        description: '야생생물관리시스템 공무원 및 관리자용 사용 설명서 및 소개 자료입니다.',
+        icon: 'menu_book',
+        theme: 'theme-orange',
+        url: 'https://yongtae999.github.io/wildlife-management-system/wildlife_system_manual.html'
     }
 ];
 
@@ -147,18 +155,5 @@ document.addEventListener('DOMContentLoaded', () => {
             appGrid.appendChild(card);
         });
 
-        // '사용설명서' 카드 추가
-        const manualCard = document.createElement('a');
-        manualCard.href = 'manual.html';
-        manualCard.className = 'app-card theme-green';
-        manualCard.innerHTML = `
-            <div class="app-icon-wrapper">
-                <span class="material-icons-rounded">help_outline</span>
-            </div>
-            <h4>사용설명서</h4>
-            <p>업무 지원 데스크의 로그인 방법 및 각 메뉴별 사용법을 안내합니다.</p>
-            <span class="material-icons-rounded launch-icon">arrow_forward</span>
-        `;
-        appGrid.appendChild(manualCard);
     }
 });
