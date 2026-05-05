@@ -32,6 +32,14 @@ const appsData = [
         icon: 'contacts',
         theme: 'theme-purple',
         url: 'https://yongtae999.github.io/contact-manager/index.html'
+    },
+    {
+        id: 'label-printer',
+        title: '스마트 주소 라벨 생성기',
+        description: '엑셀 주소록을 업로드하여 발송용 폼텍 라벨지로 바로 인쇄하고 우편번호를 자동 생성합니다.',
+        icon: 'label',
+        theme: 'theme-blue',
+        url: 'https://yongtae999.github.io/label-printer/index.html'
     }
 ];
 
