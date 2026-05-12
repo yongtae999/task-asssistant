@@ -43,11 +43,12 @@ const appsData = [
     },
     {
         id: 'system-manual',
-        title: '시스템 소개',
+        title: '야생생물시스템 소개',
         description: '야생생물관리시스템 공무원 및 관리자용 사용 설명서 및 소개 자료입니다.',
         icon: 'menu_book',
         theme: 'theme-orange',
-        url: 'https://yongtae999.github.io/wildlife-management-system/wildlife_system_manual.html'
+        url: 'https://yongtae999.github.io/wildlife-management-system/wildlife_system_manual.html',
+        installUrl: 'https://drive.google.com/file/d/1XMlPQhCM8_1ilR2I8X7NtIg-u2fr17AT/view?usp=sharing'
     }
 ];
 
@@ -138,21 +139,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 기존 앱 렌더링
         appsData.forEach(app => {
-            const card = document.createElement('a');
-            card.href = app.url;
+            const card = document.createElement('div');
             card.className = `app-card ${app.theme}`;
-            // 새 탭에서 열리도록 (선택 사항 - 포털 내에서 이동할지 새창으로 띄울지)
-            // card.target = '_blank'; 
             
-            card.innerHTML = `
-                <div class="app-icon-wrapper">
-                    <span class="material-icons-rounded">${app.icon}</span>
-                </div>
-                <h4>${app.title}</h4>
-                <p>${app.description}</p>
-                <span class="material-icons-rounded launch-icon">arrow_forward</span>
+            let cardHTML = `
+                <a href="${app.url}" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; flex-grow: 1;">
+                    <div class="app-icon-wrapper">
+                        <span class="material-icons-rounded">${app.icon}</span>
+                    </div>
+                    <h4>${app.title}</h4>
+                    <p style="margin-bottom: ${app.installUrl ? '0' : '0'};">${app.description}</p>
+                </a>
             `;
+
+            if (app.installUrl) {
+                // 다운로드 버튼 추가
+                cardHTML += `
+                    <a href="${app.installUrl}" target="_blank" style="margin-top: 16px; background: rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.05); padding: 10px; border-radius: 10px; text-align: center; text-decoration: none; color: var(--primary-dark); font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s;" onmouseover="this.style.background='rgba(46, 125, 50, 0.1)'" onmouseout="this.style.background='rgba(0,0,0,0.04)'">
+                        <span class="material-icons-rounded" style="font-size: 18px;">android</span>
+                        앱 설치파일 다운로드
+                    </a>
+                `;
+            } else {
+                cardHTML += `<a href="${app.url}" style="position: absolute; inset: 0; z-index: 1;"></a>
+                             <span class="material-icons-rounded launch-icon">arrow_forward</span>`;
+            }
             
+            card.innerHTML = cardHTML;
             appGrid.appendChild(card);
         });
 
