@@ -49,6 +49,14 @@ const appsData = [
         theme: 'theme-orange',
         url: 'https://yongtae999.github.io/wildlife-management-system/wildlife_system_manual.html',
         installUrl: 'https://drive.google.com/file/d/1XMlPQhCM8_1ilR2I8X7NtIg-u2fr17AT/view?usp=sharing'
+    },
+    {
+        id: 'hunting-quiz',
+        title: '수렵면허 모의고사',
+        description: '수렵면허 시험 합격을 위한 과목별 기출 모의고사 및 문제 풀이를 제공합니다.',
+        icon: 'quiz',
+        theme: 'theme-red',
+        url: 'https://yongtae999.github.io/hunting-quiz/'
     }
 ];
 
